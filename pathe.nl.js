@@ -32,3 +32,10 @@ $('.movie-highlight .heading a').each(function(index, movie) {
       });
   }
 });
+
+$('span:contains("nederlands")').css('color','red');
+$('span:contains("nederlands")').parents('.movie-highlight').next('.day-table').remove();
+$('span:contains("nederlands")').parents('.movie-highlight').remove();
+$('span:contains("turkse")').parents('.movie-highlight').next('.day-table').remove();
+$('span:contains("turkse")').parents('.movie-highlight').remove();
+
