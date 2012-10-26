@@ -1,9 +1,3 @@
-//var title = $('.movie-highlight .heading a').slice(1).first().text();
-//title = title.toLowerCase();
-//title = title.replace(/\s+/g, '_');
-//http://www.rottentomatoes.com/search/?search=paranormal&sitesearch=rt
-//console.log(query);
-//var title = $('.movie-highlight .heading a').slice(1).first().text();
 $('.movie-highlight .heading a').each(function(index, movie) { 
   var title = $(movie).text();
   var query = 'http://www.rottentomatoes.com/search/?search='+encodeURIComponent(title)+'&sitesearch=rt';
@@ -16,7 +10,7 @@ $('.movie-highlight .heading a').each(function(index, movie) {
       if (rating != '') {
         //console.log(title + ' found ' + rating);
       } else {
-	rating = 'not found';
+        rating = 'not found';
       }
     } else {
       rating = rating + '%';
