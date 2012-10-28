@@ -1,3 +1,7 @@
+function trim (str) {
+  return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+}
+
 function getRottenRating(title, callback) {
   var rating = '';
   var query = 'http://www.rottentomatoes.com/search/?search='+encodeURIComponent(title)+'&sitesearch=rt';
@@ -35,7 +39,7 @@ function removeTags(title) {
     title = title.replace(new RegExp('(' + tag + ')', 'gi'), '');
     title = title.replace(new RegExp('(\sts)', 'gi'), '');
   });
-  return title;
+  return trim(title);
 }
 
 $('.top h1 a').text('Movies');
